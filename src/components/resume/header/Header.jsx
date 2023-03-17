@@ -1,0 +1,88 @@
+import MyPhoto from "../photo/MyPhoto";
+import "./style.css";
+import { useState, useEffect } from "react";
+import { BiEditAlt } from "react-icons/bi";
+
+const Header = () => {
+  const [name, setName] = useState("Ім'я");
+  const [surname, setSurname] = useState("Прізвище");
+  const [age, setAge] = useState("Вік");
+  const [editField, setEditField] = useState("");
+
+  useEffect(() => {
+    name === "Ім'я" && surname === "Прізвище"
+      ? (document.title = "My resume")
+      : (document.title = `${name} ${surname}`);
+  }, [name, surname]);
+
+  function handleKeyPress(e) {
+    if (e.key === "Enter") {
+      setEditField("");
+    }
+  }
+
+  function handleEdit(fieldName) {
+    setEditField(fieldName);
+  }
+
+  return (
+    <div className="form__header">
+      <MyPhoto />
+      <div className="header__info">
+        <div>
+          {editField === "name" ? (
+            <input
+              type="text"
+              className="info__name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              onKeyDown={handleKeyPress}
+              onBlur={() => setEditField("")}
+            />
+          ) : (
+            <span className="info__name">{name}</span>
+          )}
+
+          <BiEditAlt className="btnChange" onClick={() => handleEdit("name")} />
+        </div>
+        <div>
+          {editField === "surname" ? (
+            <input
+              type="text"
+              className="info__surname"
+              value={surname}
+              onChange={(e) => setSurname(e.target.value)}
+              onKeyDown={handleKeyPress}
+              onBlur={() => setEditField("")}
+            />
+          ) : (
+            <span className="info__surname">{surname}</span>
+          )}
+
+          <BiEditAlt
+            className="btnChange"
+            onClick={() => handleEdit("surname")}
+          />
+        </div>
+        <div>
+          {editField === "age" ? (
+            <input
+              type="text"
+              className="info__age"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              onKeyDown={handleKeyPress}
+              onBlur={() => setEditField("")}
+            />
+          ) : (
+            <span className="info__age">{age}</span>
+          )}
+
+          <BiEditAlt className="btnChange" onClick={() => handleEdit("age")} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Header;

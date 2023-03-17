@@ -1,0 +1,30 @@
+.form__header {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(201, 175, 144);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+.header__info {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    font-size: 20px;
+}
+.info__name, .info__surname,  .info__age {
+    width: 120px;
+}
+
+.btnChange {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    color:rgb(84, 60, 30)
+}
+.btnChange:hover {
+    color:rgb(129, 92, 47);
+    transition: 0.3s;
+}

@@ -1,0 +1,44 @@
+.about {
+    display: flex;
+    justify-content: space-around;
+    background-color: blanchedalmond;
+    min-width: 80%;
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+}
+.about__line {
+    min-height: 10px;
+    background-color: black;
+    width: 1px;
+}
+.about__myself, .about__quality {
+    display: flex;
+    flex-direction: column;
+    white-space: pre-wrap;
+    min-width: 40%;
+    max-width: 50%;
+    margin: 10px;
+}
+
+.about__header {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.changeBtn {
+    display: flex;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    color: rgb(122, 98, 14);
+}
+
+.btnAdd:hover {
+    color: rgb(18, 203, 36);
+    transition: 0.3s;
+}
+.btnRem:hover {
+    color: rgb(203, 18, 18);
+    transition: 0.3s;
+}

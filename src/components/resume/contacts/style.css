@@ -1,0 +1,34 @@
+.contacts {
+    min-width: 80%;
+    background-color: rgb(123, 172, 97);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contacts__phone, .contacts__mail, .contacts__instagram, .contacts__facebook {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts__social {
+    display: flex;
+    justify-content: center;
+}
+.phone, .instagram, .mail, .facebook {
+    margin-right: 5px;
+}
+.editBtn {
+    margin-left: 5px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+.editBtn:hover {
+    color: green;
+    transition: 0.3s;
+}
