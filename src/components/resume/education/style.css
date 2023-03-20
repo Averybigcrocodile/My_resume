@@ -1,0 +1,10 @@
+.school {
+    display: flex;
+    justify-content: space-between;
+}
+.setSchool {
+    display: flex;
+    justify-content: space-between;
+}
+.education {
+}
