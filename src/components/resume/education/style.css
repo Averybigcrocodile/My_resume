@@ -1,10 +1,53 @@
-.school {
+.educationAndExperience {
+    background-color: rgb(172, 104, 104);
+    margin: 20px 0 0;
+    padding: 20px;
+    width: 80%;
+    border-radius: 20px;
     display: flex;
+    justify-content: space-around;
+}
+
+.line {
+    min-height: 10px;
+    background-color: black;
+    width: 1px;
+}
+.education__btn {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+}
+.education__btn:hover {
+    color:rgb(78, 157, 130);
+    transition: 0.3s;
+}
+.education, .experience {
+    width: 70%;
+    padding: 10px;
+}
+.setEducation, .setExperience {
+    display: flex;
+    width: 100%;
     justify-content: space-between;
 }
-.setSchool {
+.school, .habit {
+    display: flex;
+    padding: 2px;
+    border-radius: 4px;
+    margin: 5px;
+}
+.remBtn {
+    width: 10px;
+    height: 10px;
+}
+.remBtn:hover {
+    color: rgb(142, 68, 68);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.item {
     display: flex;
     justify-content: space-between;
-}
-.education {
+    width: 100%;
 }
