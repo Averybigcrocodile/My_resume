@@ -15,9 +15,12 @@ const About = () => {
         <div className="about__header">
           Про мене:
           <div className="changeBtn">
-            <BiEditAlt className="btnAdd" onClick={() => setShowAbout(true)} />
+            <BiEditAlt
+              className="btnAdd hide-on-save"
+              onClick={() => setShowAbout(true)}
+            />
             <AiOutlineClose
-              className="btnRem"
+              className="btnRem hide-on-save"
               onClick={() => setAboutValue()}
             />
           </div>
@@ -41,11 +44,11 @@ const About = () => {
           Мої якості:
           <div className="changeBtn">
             <BiEditAlt
-              className="btnAdd"
+              className="btnAdd hide-on-save"
               onClick={() => setShowQuality(true)}
             />
             <AiOutlineClose
-              className="btnRem"
+              className="btnRem hide-on-save"
               onClick={() => setQualityValue("")}
             />
           </div>

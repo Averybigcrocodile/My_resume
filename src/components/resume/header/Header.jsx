@@ -43,7 +43,10 @@ const Header = () => {
             <span className="info__name">{name}</span>
           )}
 
-          <BiEditAlt className="btnChange" onClick={() => handleEdit("name")} />
+          <BiEditAlt
+            className="btnChange hide-on-save"
+            onClick={() => handleEdit("name")}
+          />
         </div>
         <div>
           {editField === "surname" ? (
@@ -60,7 +63,7 @@ const Header = () => {
           )}
 
           <BiEditAlt
-            className="btnChange"
+            className="btnChange hide-on-save"
             onClick={() => handleEdit("surname")}
           />
         </div>
@@ -78,7 +81,10 @@ const Header = () => {
             <span className="info__age">{age}</span>
           )}
 
-          <BiEditAlt className="btnChange" onClick={() => handleEdit("age")} />
+          <BiEditAlt
+            className="btnChange hide-on-save"
+            onClick={() => handleEdit("age")}
+          />
         </div>
       </div>
     </div>

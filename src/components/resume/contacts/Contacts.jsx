@@ -32,7 +32,7 @@ const Contacts = () => {
             <span>{phone}</span>
           )}
           <BiEditAlt
-            className="editBtn"
+            className="editBtn hide-on-save"
             onClick={() => setEditField("phone")}
           />
         </div>
@@ -48,7 +48,10 @@ const Contacts = () => {
           ) : (
             <span>{mail}</span>
           )}
-          <BiEditAlt className="editBtn" onClick={() => setEditField("mail")} />
+          <BiEditAlt
+            className="editBtn hide-on-save"
+            onClick={() => setEditField("mail")}
+          />
         </div>
         <div className="contacts__facebook">
           <AiFillFacebook className="facebook" />
@@ -63,7 +66,7 @@ const Contacts = () => {
             <span>{facebook}</span>
           )}
           <BiEditAlt
-            className="editBtn"
+            className="editBtn hide-on-save"
             onClick={() => setEditField("facebook")}
           />
         </div>
@@ -79,7 +82,10 @@ const Contacts = () => {
           ) : (
             <span>{inst}</span>
           )}
-          <BiEditAlt className="editBtn" onClick={() => setEditField("inst")} />
+          <BiEditAlt
+            className="editBtn hide-on-save"
+            onClick={() => setEditField("inst")}
+          />
         </div>
       </div>
     </div>

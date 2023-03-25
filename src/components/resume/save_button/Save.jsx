@@ -1,9 +1,9 @@
 import "./style.css";
 import { AiFillSave } from "react-icons/ai";
 
-const Save = () => {
+const Save = ({ onClick }) => {
   return (
-    <div className="save__btn">
+    <div className="save__btn hide-on-save" onClick={onClick}>
       <AiFillSave />
       Зберегти
     </div>

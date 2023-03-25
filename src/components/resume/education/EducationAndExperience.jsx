@@ -17,7 +17,7 @@ const EducationAndExperience = () => {
         </div>
         <div>
           <AiOutlineClose
-            className="remBtn"
+            className="remBtn hide-on-save"
             onClick={() =>
               setSchools([
                 ...schools.slice(0, index),
@@ -38,7 +38,7 @@ const EducationAndExperience = () => {
         </div>
         <div>
           <AiOutlineClose
-            className="remBtn"
+            className="remBtn hide-on-save"
             onClick={() =>
               setExperience([
                 ...experience.slice(0, index),
@@ -85,7 +85,7 @@ const EducationAndExperience = () => {
           <div>Освіта і курси:</div>
           {!addSchools ? (
             <AiOutlinePlus
-              className="education__btn"
+              className="education__btn hide-on-save"
               onClick={() => setAddSchools(true)}
             />
           ) : (
@@ -105,7 +105,7 @@ const EducationAndExperience = () => {
           <div>Навички і знання:</div>
           {!addExperience ? (
             <AiOutlinePlus
-              className="education__btn"
+              className="education__btn hide-on-save"
               onClick={() => setAddExperience(true)}
             />
           ) : (
