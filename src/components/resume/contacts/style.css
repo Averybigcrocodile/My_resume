@@ -1,6 +1,7 @@
 .contacts {
     min-width: 80%;
-    background-color: rgb(123, 172, 97);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(67, 201, 250);
     padding: 20px;
     margin: 20px;
     border-radius: 20px;

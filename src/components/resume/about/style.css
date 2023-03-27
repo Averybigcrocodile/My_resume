@@ -1,7 +1,8 @@
 .about {
     display: flex;
     justify-content: space-around;
-    background-color: blanchedalmond;
+    background-color: rgb(251, 251, 251);
+    border: 1px solid rgb(67, 201, 250);
     min-width: 80%;
     max-width: 80%;
     padding: 20px;
@@ -31,7 +32,7 @@
     cursor: pointer;
     width: 25px;
     height: 25px;
-    color: rgb(122, 98, 14);
+    color: rgb(3, 3, 3);
 }
 
 .btnAdd:hover {
