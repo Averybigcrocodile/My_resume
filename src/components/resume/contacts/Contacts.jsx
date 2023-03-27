@@ -15,6 +15,27 @@ const Contacts = () => {
   const [facebook, setFacebook] = useState("");
   const [editField, setEditField] = useState("");
 
+  function handleKeyPressPhone(e) {
+    if (e.key === "Enter") {
+      setEditField(phone);
+    }
+  }
+  function handleKeyPressMail(e) {
+    if (e.key === "Enter") {
+      setEditField(mail);
+    }
+  }
+  function handleKeyPressInst(e) {
+    if (e.key === "Enter") {
+      setEditField(inst);
+    }
+  }
+  function handleKeyPressFacebook(e) {
+    if (e.key === "Enter") {
+      setEditField(facebook);
+    }
+  }
+
   return (
     <div className="contacts">
       <div className="contacts__header">Контакти:</div>
@@ -27,6 +48,7 @@ const Contacts = () => {
               onChange={(e) => setPhone(e.target.value)}
               value={phone}
               onBlur={() => setEditField("")}
+              onKeyDown={handleKeyPressPhone}
             />
           ) : (
             <span>{phone}</span>
@@ -44,6 +66,7 @@ const Contacts = () => {
               onChange={(e) => setMail(e.target.value)}
               value={mail}
               onBlur={() => setEditField("")}
+              onKeyDown={handleKeyPressMail}
             />
           ) : (
             <span>{mail}</span>
@@ -61,6 +84,7 @@ const Contacts = () => {
               onChange={(e) => setFacebook(e.target.value)}
               value={facebook}
               onBlur={() => setEditField("")}
+              onKeyDown={handleKeyPressFacebook}
             />
           ) : (
             <span>{facebook}</span>
@@ -78,6 +102,7 @@ const Contacts = () => {
               onChange={(e) => setInst(e.target.value)}
               value={inst}
               onBlur={() => setEditField("")}
+              onKeyDown={handleKeyPressInst}
             />
           ) : (
             <span>{inst}</span>

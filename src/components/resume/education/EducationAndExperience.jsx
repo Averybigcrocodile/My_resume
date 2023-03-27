@@ -82,40 +82,44 @@ const EducationAndExperience = () => {
     <div className="educationAndExperience">
       <div className="education">
         <div className="setEducation">
-          <div>Освіта і курси:</div>
-          {!addSchools ? (
-            <AiOutlinePlus
-              className="education__btn hide-on-save"
-              onClick={() => setAddSchools(true)}
-            />
-          ) : (
-            <input
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              onBlur={handleBlurSchool}
-              onKeyDown={handkeKeyEducation}
-            />
-          )}
+          <div className="education__header">
+            Освіта і курси:
+            {!addSchools ? (
+              <AiOutlinePlus
+                className="education__btn hide-on-save"
+                onClick={() => setAddSchools(true)}
+              />
+            ) : (
+              <input
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                onBlur={handleBlurSchool}
+                onKeyDown={handkeKeyEducation}
+              />
+            )}
+          </div>
         </div>
         {education}
       </div>
       <div className="line"></div>
       <div className="experience">
         <div className="setExperience">
-          <div>Навички і знання:</div>
-          {!addExperience ? (
-            <AiOutlinePlus
-              className="education__btn hide-on-save"
-              onClick={() => setAddExperience(true)}
-            />
-          ) : (
-            <input
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              onBlur={handleBlurExperience}
-              onKeyDown={handkeKeyExperience}
-            />
-          )}
+          <div className="experience__header">
+            Навички і знання:
+            {!addExperience ? (
+              <AiOutlinePlus
+                className="education__btn hide-on-save"
+                onClick={() => setAddExperience(true)}
+              />
+            ) : (
+              <input
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                onBlur={handleBlurExperience}
+                onKeyDown={handkeKeyExperience}
+              />
+            )}
+          </div>
         </div>
         {exp}
       </div>
