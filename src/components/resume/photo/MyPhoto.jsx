@@ -17,7 +17,7 @@ const Photo = () => {
   return (
     <div className="imgUser">
       {img ? (
-        <div>
+        <div className="imgUser__img_cont">
           <img className="imgUser__img" src={img} alt="img" />
           <AiOutlineClose className="remImg" onClick={() => setImg(null)} />
         </div>
@@ -31,7 +31,7 @@ const Photo = () => {
             className="input input__file"
           />
           <div>
-            <label for="input__file" className="input__file-button">
+            <label htmlFor="input__file" className="input__file-button">
               Оберіть файл
             </label>
           </div>
