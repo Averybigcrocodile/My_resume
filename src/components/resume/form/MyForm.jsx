@@ -22,6 +22,9 @@ const MyForm = () => {
         1
       );
     });
+    element.querySelectorAll(".hide-on-save").forEach((el) => {
+      el.style.display = "block";
+    });
   }
 
   return (
