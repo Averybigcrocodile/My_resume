@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { BiEditAlt } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-import "./style.css";
+import styles from "./About.module.css";
+import cn from "classnames";
 
 const About = () => {
   const [aboutValue, setAboutValue] = useState("");
@@ -10,24 +11,24 @@ const About = () => {
   const [showQuality, setShowQuality] = useState(false);
 
   return (
-    <div className="about">
-      <div className="about__myself">
-        <div className="about__header">
+    <div className={cn(styles.about)}>
+      <div className={cn(styles.about__myself)}>
+        <div className={cn(styles.about__header)}>
           Про мене:
-          <div className="changeBtn">
+          <div className={cn(styles.changeBtn)}>
             <BiEditAlt
-              className="btnAdd hide-on-save"
+              className={cn(styles.btnAdd, styles.hide_on_save)}
               onClick={() => setShowAbout(true)}
             />
             <AiOutlineClose
-              className="btnRem hide-on-save"
+              className={cn(styles.btnRem, styles.hide_on_save)}
               onClick={() => setAboutValue()}
             />
           </div>
         </div>
 
         {!showAbout ? (
-          <div className="about__text">{aboutValue}</div>
+          <div className={cn(styles.about__text)}>{aboutValue}</div>
         ) : (
           <textarea
             value={aboutValue}
@@ -38,24 +39,24 @@ const About = () => {
           />
         )}
       </div>
-      <div className="about__line"></div>
-      <div className="about__quality">
-        <div className="about__header">
+      <div className={cn(styles.about__line)}></div>
+      <div className={cn(styles.about__quality)}>
+        <div className={cn(styles.about__header)}>
           Мої якості:
-          <div className="changeBtn">
+          <div className={cn(styles.changeBtn)}>
             <BiEditAlt
-              className="btnAdd hide-on-save"
+              className={cn(styles.btnAdd, styles.hide_on_save)}
               onClick={() => setShowQuality(true)}
             />
             <AiOutlineClose
-              className="btnRem hide-on-save"
+              className={cn(styles.btnRem, styles.hide_on_save)}
               onClick={() => setQualityValue("")}
             />
           </div>
         </div>
 
         {!showQuality ? (
-          <div className="about__text">{qualityValue}</div>
+          <div className={cn(styles.about__text)}>{qualityValue}</div>
         ) : (
           <textarea
             value={qualityValue}

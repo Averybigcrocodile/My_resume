@@ -1,4 +1,5 @@
-import "./style.css";
+import styles from "./MyForm.module.css";
+import cn from "classnames";
 import Header from "../header/Header";
 import About from "../about/About";
 import Contacts from "../contacts/Contacts";
@@ -10,7 +11,7 @@ import { saveAs } from "file-saver";
 const MyForm = () => {
   function savePageAsImage() {
     const element = document.getElementById("myForm");
-    element.querySelectorAll(".hide-on-save").forEach((el) => {
+    element.querySelectorAll(".hide_on_save").forEach((el) => {
       el.style.display = "none";
     });
     html2canvas(element, { backgroundColor: null }).then(function (canvas) {
@@ -22,13 +23,13 @@ const MyForm = () => {
         1
       );
     });
-    element.querySelectorAll(".hide-on-save").forEach((el) => {
+    element.querySelectorAll(".hide_on_save").forEach((el) => {
       el.style.display = "block";
     });
   }
 
   return (
-    <div className="myForm" id="myForm">
+    <div className={cn(styles.myForm)} id="myForm">
       <Header />
       <About />
       <EducationAndExperience />

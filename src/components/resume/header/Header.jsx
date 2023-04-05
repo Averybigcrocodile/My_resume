@@ -1,5 +1,6 @@
 import MyPhoto from "../photo/MyPhoto";
-import "./style.css";
+import styles from "./Header.module.css";
+import cn from "classnames";
 import { useState, useEffect } from "react";
 import { BiEditAlt } from "react-icons/bi";
 
@@ -26,25 +27,25 @@ const Header = () => {
   }
 
   return (
-    <div className="form__header">
+    <div className={cn(styles.form__header)}>
       <MyPhoto />
-      <div className="header__info">
+      <div className={cn(styles.header__info)}>
         <div>
           {editField === "name" ? (
             <input
               type="text"
-              className="info__name"
+              className={cn(styles.info__name)}
               value={name}
               onChange={(e) => setName(e.target.value)}
               onKeyDown={handleKeyPress}
               onBlur={() => setEditField("")}
             />
           ) : (
-            <span className="info__name">{name}</span>
+            <span className={cn(styles.info__name)}>{name}</span>
           )}
 
           <BiEditAlt
-            className="btnChange hide-on-save"
+            className={cn(styles.btnChange, styles.hide_on_save)}
             onClick={() => handleEdit("name")}
           />
         </div>
@@ -52,18 +53,18 @@ const Header = () => {
           {editField === "surname" ? (
             <input
               type="text"
-              className="info__surname"
+              className={cn(styles.info__surname)}
               value={surname}
               onChange={(e) => setSurname(e.target.value)}
               onKeyDown={handleKeyPress}
               onBlur={() => setEditField("")}
             />
           ) : (
-            <span className="info__surname">{surname}</span>
+            <span className={cn(styles.info__surname)}>{surname}</span>
           )}
 
           <BiEditAlt
-            className="btnChange hide-on-save"
+            className={cn(styles.btnChange, styles.hide_on_save)}
             onClick={() => handleEdit("surname")}
           />
         </div>
@@ -71,18 +72,18 @@ const Header = () => {
           {editField === "age" ? (
             <input
               type="text"
-              className="info__age"
+              className={cn(styles.info__age)}
               value={age}
               onChange={(e) => setAge(e.target.value)}
               onKeyDown={handleKeyPress}
               onBlur={() => setEditField("")}
             />
           ) : (
-            <span className="info__age">{age}</span>
+            <span className={cn(styles.info__age)}>{age}</span>
           )}
 
           <BiEditAlt
-            className="btnChange hide-on-save"
+            className={cn(styles.btnChange, styles.hide_on_save)}
             onClick={() => handleEdit("age")}
           />
         </div>

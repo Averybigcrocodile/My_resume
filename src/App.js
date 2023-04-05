@@ -1,12 +1,13 @@
-import './App.css';
+import styles from './App.module.css';
+import cn from 'classnames';
 import MyButton from './components/resume/button/MyButton';
 import MyForm from './components/resume/form/MyForm';
 import { useState } from "react";
 
 function App() {
 let mainPage = 
-  <div className='mainPage'>
-    <MyButton className='mainPage__btn' onClick={addVisible} />
+  <div className={cn(styles.mainPage)}>
+    <MyButton className={cn(styles.mainPage__btn)} onClick={addVisible} />
     <span>Add resume</span>
   </div>
 
@@ -18,7 +19,7 @@ function addVisible() {
   setVisibleAdd(null);
 }
   return (
-    <div className="App">
+    <div className={cn(styles.App)}>
       {visibleAdd}
       {visibleForm}
     </div>

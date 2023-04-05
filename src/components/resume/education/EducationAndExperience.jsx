@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
-import "./style.css";
+import styles from "./EducationAndExperience.module.css";
+import cn from "classnames";
 
 const EducationAndExperience = () => {
   const [value, setValue] = useState("");
@@ -11,13 +12,13 @@ const EducationAndExperience = () => {
 
   let education = schools.map((item, index) => {
     return (
-      <div className="school" key={index}>
-        <div className="item">
+      <div className={cn(styles.school)} key={index}>
+        <div className={cn(styles.item)}>
           {index + 1}. {item}
         </div>
         <div>
           <AiOutlineClose
-            className="remBtn hide-on-save"
+            className={cn(styles.remBtn, styles.hide_on_save)}
             onClick={() =>
               setSchools([
                 ...schools.slice(0, index),
@@ -32,13 +33,13 @@ const EducationAndExperience = () => {
 
   let exp = experience.map((item, index) => {
     return (
-      <div className="habit" key={index}>
-        <div className="item">
+      <div className={cn(styles.habit)} key={index}>
+        <div className={cn(styles.item)}>
           {index + 1}. {item}
         </div>
         <div>
           <AiOutlineClose
-            className="remBtn hide-on-save"
+            className={cn(styles.remBtn, styles.hide_on_save)}
             onClick={() =>
               setExperience([
                 ...experience.slice(0, index),
@@ -79,14 +80,14 @@ const EducationAndExperience = () => {
   }
 
   return (
-    <div className="educationAndExperience">
-      <div className="education">
-        <div className="setEducation">
-          <div className="education__header">
+    <div className={cn(styles.educationAndExperience)}>
+      <div className={cn(styles.education)}>
+        <div className={cn(styles.setEducation)}>
+          <div className={cn(styles.education__header)}>
             Освіта і курси:
             {!addSchools ? (
               <AiOutlinePlus
-                className="education__btn hide-on-save"
+                className={cn(styles.education__btn, styles.hide_on_save)}
                 onClick={() => setAddSchools(true)}
               />
             ) : (
@@ -101,14 +102,14 @@ const EducationAndExperience = () => {
         </div>
         {education}
       </div>
-      <div className="line"></div>
-      <div className="experience">
-        <div className="setExperience">
-          <div className="experience__header">
+      <div className={cn(styles.line)}></div>
+      <div className={cn(styles.experience)}>
+        <div className={cn(styles.setExperience)}>
+          <div className={cn(styles.experience__header)}>
             Навички і знання:
             {!addExperience ? (
               <AiOutlinePlus
-                className="education__btn hide-on-save"
+                className={cn(styles.education__btn, styles.hide_on_save)}
                 onClick={() => setAddExperience(true)}
               />
             ) : (

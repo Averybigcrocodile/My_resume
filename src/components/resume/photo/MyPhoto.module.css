@@ -48,7 +48,7 @@
     position: absolute;
   }
 
-  .input__file-button {
+  .input__file_button {
     font-family: 'Courier New', Courier, monospace;
     border: 1px solid rgb(47, 186, 245);
     padding: 3px 5px;

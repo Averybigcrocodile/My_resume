@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./style.css";
+import styles from "./Contacts.module.css";
+import cn from "classnames";
 import {
   AiFillFacebook,
   AiFillInstagram,
@@ -37,11 +38,11 @@ const Contacts = () => {
   }
 
   return (
-    <div className="contacts">
-      <div className="contacts__header">Контакти:</div>
-      <div className="contacts__social">
-        <div className="contacts__phone">
-          <AiFillPhone className="phone" />
+    <div className={cn(styles.contacts)}>
+      <div className={cn(styles.contacts__header)}>Контакти:</div>
+      <div className={cn(styles.contacts__social)}>
+        <div className={cn(styles.contacts__phone)}>
+          <AiFillPhone className={cn(styles.phone)} />
 
           {editField === "phone" ? (
             <input
@@ -54,11 +55,11 @@ const Contacts = () => {
             <span>{phone}</span>
           )}
           <BiEditAlt
-            className="editBtn hide-on-save"
+            className={cn(styles.editBtn, styles.hide_on_save)}
             onClick={() => setEditField("phone")}
           />
         </div>
-        <div className="contacts__mail">
+        <div className={cn(styles.contacts__mail)}>
           <AiFillMail className="mail" />
 
           {editField === "mail" ? (
@@ -72,11 +73,11 @@ const Contacts = () => {
             <span>{mail}</span>
           )}
           <BiEditAlt
-            className="editBtn hide-on-save"
+            className={cn(styles.editBtn, styles.hide_on_save)}
             onClick={() => setEditField("mail")}
           />
         </div>
-        <div className="contacts__facebook">
+        <div className={cn(styles.contacts__facebook)}>
           <AiFillFacebook className="facebook" />
 
           {editField === "facebook" ? (
@@ -90,11 +91,11 @@ const Contacts = () => {
             <span>{facebook}</span>
           )}
           <BiEditAlt
-            className="editBtn hide-on-save"
+            className={cn(styles.editBtn, styles.hide_on_save)}
             onClick={() => setEditField("facebook")}
           />
         </div>
-        <div className="contacts__instagram">
+        <div className={cn(styles.contacts__instagram)}>
           <AiFillInstagram className="instagram" />
 
           {editField === "inst" ? (
@@ -108,7 +109,7 @@ const Contacts = () => {
             <span>{inst}</span>
           )}
           <BiEditAlt
-            className="editBtn hide-on-save"
+            className={cn(styles.editBtn, styles.hide_on_save)}
             onClick={() => setEditField("inst")}
           />
         </div>

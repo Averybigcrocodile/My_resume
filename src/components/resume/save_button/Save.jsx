@@ -1,8 +1,12 @@
-import "./style.css";
+import styles from "./Save.module.css";
+import cn from "classnames";
 
 const Save = ({ onClick }) => {
   return (
-    <div className="save__btn hide-on-save" onClick={onClick}>
+    <div
+      className={cn(styles.save__btn, styles.hide_on_save)}
+      onClick={onClick}
+    >
       <span>Зберегти</span>
     </div>
   );
