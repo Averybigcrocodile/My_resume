@@ -1,5 +1,6 @@
 import MyPhoto from "../photo/MyPhoto";
 import styles from "./Header.module.css";
+import styles2 from "../form/MyForm.module.css";
 import cn from "classnames";
 import { useState, useEffect } from "react";
 import { BiEditAlt } from "react-icons/bi";
@@ -45,7 +46,7 @@ const Header = () => {
           )}
 
           <BiEditAlt
-            className={cn(styles.btnChange, styles.hide_on_save)}
+            className={cn(styles.btnChange, styles2.hide_on_save)}
             onClick={() => handleEdit("name")}
           />
         </div>
@@ -64,7 +65,7 @@ const Header = () => {
           )}
 
           <BiEditAlt
-            className={cn(styles.btnChange, styles.hide_on_save)}
+            className={cn(styles.btnChange, styles2.hide_on_save)}
             onClick={() => handleEdit("surname")}
           />
         </div>
@@ -83,7 +84,7 @@ const Header = () => {
           )}
 
           <BiEditAlt
-            className={cn(styles.btnChange, styles.hide_on_save)}
+            className={cn(styles.btnChange, styles2.hide_on_save)}
             onClick={() => handleEdit("age")}
           />
         </div>

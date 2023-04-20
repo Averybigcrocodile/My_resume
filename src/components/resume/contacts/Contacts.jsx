@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Contacts.module.css";
+import styles2 from "../form/MyForm.module.css";
 import cn from "classnames";
 import {
   AiFillFacebook,
@@ -55,7 +56,7 @@ const Contacts = () => {
             <span>{phone}</span>
           )}
           <BiEditAlt
-            className={cn(styles.editBtn, styles.hide_on_save)}
+            className={cn(styles.editBtn, styles2.hide_on_save)}
             onClick={() => setEditField("phone")}
           />
         </div>
@@ -73,7 +74,7 @@ const Contacts = () => {
             <span>{mail}</span>
           )}
           <BiEditAlt
-            className={cn(styles.editBtn, styles.hide_on_save)}
+            className={cn(styles.editBtn, styles2.hide_on_save)}
             onClick={() => setEditField("mail")}
           />
         </div>
@@ -91,7 +92,7 @@ const Contacts = () => {
             <span>{facebook}</span>
           )}
           <BiEditAlt
-            className={cn(styles.editBtn, styles.hide_on_save)}
+            className={cn(styles.editBtn, styles2.hide_on_save)}
             onClick={() => setEditField("facebook")}
           />
         </div>
@@ -109,7 +110,7 @@ const Contacts = () => {
             <span>{inst}</span>
           )}
           <BiEditAlt
-            className={cn(styles.editBtn, styles.hide_on_save)}
+            className={cn(styles.editBtn, styles2.hide_on_save)}
             onClick={() => setEditField("inst")}
           />
         </div>

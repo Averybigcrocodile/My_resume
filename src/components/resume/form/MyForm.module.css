@@ -10,3 +10,7 @@
     border-radius: 20px;
     padding: 20px;
 }
+.hide_on_save {
+    display: block;
+}
+

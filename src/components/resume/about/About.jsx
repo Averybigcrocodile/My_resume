@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BiEditAlt } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "./About.module.css";
+import styles2 from "../form/MyForm.module.css";
 import cn from "classnames";
 
 const About = () => {
@@ -17,11 +18,11 @@ const About = () => {
           Про мене:
           <div className={cn(styles.changeBtn)}>
             <BiEditAlt
-              className={cn(styles.btnAdd, styles.hide_on_save)}
+              className={cn(styles.btnAdd, styles2.hide_on_save)}
               onClick={() => setShowAbout(true)}
             />
             <AiOutlineClose
-              className={cn(styles.btnRem, styles.hide_on_save)}
+              className={cn(styles.btnRem, styles2.hide_on_save)}
               onClick={() => setAboutValue()}
             />
           </div>
@@ -45,11 +46,11 @@ const About = () => {
           Мої якості:
           <div className={cn(styles.changeBtn)}>
             <BiEditAlt
-              className={cn(styles.btnAdd, styles.hide_on_save)}
+              className={cn(styles.btnAdd, styles2.hide_on_save)}
               onClick={() => setShowQuality(true)}
             />
             <AiOutlineClose
-              className={cn(styles.btnRem, styles.hide_on_save)}
+              className={cn(styles.btnRem, styles2.hide_on_save)}
               onClick={() => setQualityValue("")}
             />
           </div>

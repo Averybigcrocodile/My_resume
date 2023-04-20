@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
 import styles from "./EducationAndExperience.module.css";
+import styles2 from "../form/MyForm.module.css";
 import cn from "classnames";
 
 const EducationAndExperience = () => {
@@ -18,7 +19,7 @@ const EducationAndExperience = () => {
         </div>
         <div>
           <AiOutlineClose
-            className={cn(styles.remBtn, styles.hide_on_save)}
+            className={cn(styles.remBtn, styles2.hide_on_save)}
             onClick={() =>
               setSchools([
                 ...schools.slice(0, index),
@@ -39,7 +40,7 @@ const EducationAndExperience = () => {
         </div>
         <div>
           <AiOutlineClose
-            className={cn(styles.remBtn, styles.hide_on_save)}
+            className={cn(styles.remBtn, styles2.hide_on_save)}
             onClick={() =>
               setExperience([
                 ...experience.slice(0, index),
@@ -87,7 +88,7 @@ const EducationAndExperience = () => {
             Освіта і курси:
             {!addSchools ? (
               <AiOutlinePlus
-                className={cn(styles.education__btn, styles.hide_on_save)}
+                className={cn(styles.education__btn, styles2.hide_on_save)}
                 onClick={() => setAddSchools(true)}
               />
             ) : (
@@ -109,7 +110,7 @@ const EducationAndExperience = () => {
             Навички і знання:
             {!addExperience ? (
               <AiOutlinePlus
-                className={cn(styles.education__btn, styles.hide_on_save)}
+                className={cn(styles.education__btn, styles2.hide_on_save)}
                 onClick={() => setAddExperience(true)}
               />
             ) : (

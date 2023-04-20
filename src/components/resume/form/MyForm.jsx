@@ -10,11 +10,14 @@ import { saveAs } from "file-saver";
 
 const MyForm = () => {
   function savePageAsImage() {
-    const element = document.getElementById("myForm");
-    element.querySelectorAll(".hide_on_save").forEach((el) => {
+    const elemForm = document.getElementById("myForm");
+    const hiddenElems = document.querySelectorAll(`.${styles.hide_on_save}`);
+
+    hiddenElems.forEach((el) => {
       el.style.display = "none";
     });
-    html2canvas(element, { backgroundColor: null }).then(function (canvas) {
+
+    html2canvas(elemForm, { backgroundColor: null }).then(function (canvas) {
       canvas.toBlob(
         function (blob) {
           saveAs(blob, "page.jpeg");
@@ -23,7 +26,8 @@ const MyForm = () => {
         1
       );
     });
-    element.querySelectorAll(".hide_on_save").forEach((el) => {
+
+    hiddenElems.forEach((el) => {
       el.style.display = "block";
     });
   }
